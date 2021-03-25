@@ -97,19 +97,9 @@ input::placeholder{
     font-size: 1.2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.text-line-through{
+    text-decoration: line-through;
+}
 
 /* ---------------Scroll Vertical (Classe Scroll)------------------------- */
 .scroll{
@@ -122,7 +112,7 @@ input::placeholder{
 }
 .scroll::-webkit-scrollbar-thumb{
 	border-radius: 4px;
-    background-color: rgba(0,0,0,1);
+    background-color: #120038;
     box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 

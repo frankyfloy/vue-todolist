@@ -32,10 +32,12 @@
 
                     <ol id="todolist" class="scroll">
                         <li v-for="(todo, i) in a_todo" class="d-flex">
-                            <span>{{todo.title}}</span>
+                            <span :class="(todo.status == 'done' ? 'text-line-through' : '' )">{{todo.title}}</span>
+
+
                             <div class="ml-auto">
-                                <button type="button" class="btn "><i class="fas fa-check-square"></i></button>
-                                <button type="button" class="btn "><i class="fas fa-edit"></i></button>
+                                <button v-if='todo.status != "done"' @click="done(i)" type="button" class="btn"><i class="fas fa-check-square"></i></button>
+                                <button v-if='todo.status != "done"' type="button" class="btn"><i class="fas fa-edit"></i></button>
                             </div>
                         </li>
                     </ol>
