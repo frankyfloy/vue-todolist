@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    font-size:100%;
+}
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+}
+
+#cont-Todolist{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border: 10px solid #2a35b0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header{
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px #007500;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #120038 20%, #2a35b0 80%);
+}
+
+.bg_list{
+    background: linear-gradient(135deg, #4cc303 20%,#007500 80%);
+    opacity: 0.9;
+}
+
+#todolist > ol{
+    height: 60%;
+}
+
+
+#todolist > li{
+    color: #2a35b0;
+    font-size: 1.7rem;
+    list-style-type: none;
+    border-bottom: 2px solid #2a35b0;
+    padding: 10px 15px;
+}
+
+#todolist > li:hover{
+    background: linear-gradient(135deg, #4cc303 20%,#007500 80%);
+    color: #2a35b0;
+    text-shadow: 1px 1px #000000;
+
+}
+
+#cont-Todolist #inputBtnAdd{
+    border: 2px solid #2a35b0;
+    margin-bottom: 10px;
+
+}
+
+#todolist  button:hover{
+    transform: scale(1.30);
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+
+#todolist  button .fas{
+    color: #2a35b0;
+}
+
+.myBtnController{
+    background: linear-gradient(135deg, #120038 20%, #2a35b0 80%);
+    border: 2px solid #2a35b0;
+    height: 50px;
+}
+
+.myBtnController:hover{
+    background-color: #2a35b0;
+    color: #000000;
+    border: 2px solid #2a35b0;
+}
+
+#cont-Todolist .myBtnController > input{
+    width: 100%;
+}
+
+input::placeholder{
+    color: #2a35b0;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------Scroll Vertical (Classe Scroll)------------------------- */
+.scroll{
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.scroll::-webkit-scrollbar{
+	-webkit-overflow-scrolling: auto;
+	width: 6px;
+}
+.scroll::-webkit-scrollbar-thumb{
+	border-radius: 4px;
+    background-color: rgba(0,0,0,1);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+/* ------------------------------------------------------------- */

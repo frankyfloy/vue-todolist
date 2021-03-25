@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>vue-todolist</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- mycss and media-query -->
+        <link rel="stylesheet" href="assets\master.css">
+
+        <!-- VUE : development version, includes helpful console warnings-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <!-- VUE CDN 2 -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    </head>
+    <body>
+        <div id="root">
+            <div class="container-fluid">
+                <div id="cont-Todolist" class="bg_list">
+                    <div id="header" class="text-center">
+                        <h1>ToDo List</h1>
+                    </div>
+
+                    <ol id="todolist" class="scroll">
+                        <li v-for="(todo, i) in a_todo" class="d-flex">
+                            <span>{{todo.title}}</span>
+                            <div class="ml-auto">
+                                <button type="button" class="btn "><i class="fas fa-check-square"></i></button>
+                                <button type="button" class="btn "><i class="fas fa-edit"></i></button>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <button id="inputBtnAdd" type="button" class="btn btn-outline-light btn-block myBtnController "><input type="text" min="0" max="60" placeholder = "Inserisci un todo" v-model="newTodo" @keyup.enter="addTodo"></button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Script js -->
+        <script src="assets\main.js" charset="utf-8"></script>
+    </body>
+</html>
